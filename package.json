@@ -1,0 +1,37 @@
+{
+  "name": "quick-business-platform",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "dev:worker": "npm run build && npx wrangler d1 migrations apply quick-db --local && npx wrangler dev --local --port 3000",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "test": "tsx --test tests/*.test.ts",
+    "db:migrate": "wrangler d1 migrations apply quick-db",
+    "db:seed": "wrangler d1 execute quick-db --file=./migrations/seed.sql"
+  },
+  "dependencies": {
+    "@fontsource-variable/inter": "^5.2.6",
+    "framer-motion": "^12.23.24",
+    "lucide-react": "^0.468.0",
+    "next": "^15.5.6",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-is": "^19.3.1",
+    "recharts": "^3.3.0",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20251121.0",
+    "@types/node": "^22.10.2",
+    "@types/react": "^19.0.3",
+    "@types/react-dom": "^19.0.2",
+    "eslint": "^9.16.0",
+    "eslint-config-next": "^15.5.6",
+    "tsx": "^4.20.6",
+    "typescript": "^5.7.2",
+    "wrangler": "^4.45.4"
+  }
+}

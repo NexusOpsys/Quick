@@ -1,0 +1,11 @@
+.next
+node_modules
+.wrangler
+.env
+.env.local
+.env.*.local
+.vscode/mcp.json
+*.log
+out
+*.tsbuildinfo
+.DS_Store

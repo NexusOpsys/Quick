@@ -1,0 +1,14 @@
+name = "quick-business-platform"
+main = "src/worker/index.ts"
+compatibility_date = "2025-11-21"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "quick-db"
+database_id = "replace-with-your-d1-id"
+migrations_dir = "migrations"
+
+[assets]
+directory = "./out"
+binding = "ASSETS"
+run_worker_first = ["/api/*"]
